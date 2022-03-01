@@ -2,6 +2,8 @@
     --color-1: #145f71;
     --color-2: #18c1ea;
     --color-3: #f2fdfc;
+
+    --main-width: 400px;
 }
 
 * {
@@ -17,4 +19,31 @@ html
     height: 100%;
     width: 100%;
     background-color: var(--color-3);
+    color: var(--color-1);
+    font-family: 'Nunito', sans-serif;
+}
+
+body {
+    padding: 1rem;
+}
+
+h1 {
+    color: var(--color-2);
+    margin: 1rem 0 2rem;
+    text-align: center;
+}
+
+p {
+    padding: 0 2rem;
+}
+
+.main {
+    background-color: inherit;
+    height: 100%;
+    max-width: var(--main-width);
+    margin: 0 auto;
+    box-shadow: 1rem 1rem 2rem 0rem #0000001a;
+    border-radius: 1rem;
+    padding: .5rem;
+    overflow: auto;
 }

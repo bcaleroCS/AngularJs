@@ -7,3 +7,5 @@ Hola mundo !!!
 - index.js => Archivo de Logica
 
 # Se asocian los estilos y el Script
+
+# Se introduce algo de diseño, se organiza parte de la estructura de la pagina
