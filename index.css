@@ -1,0 +1,20 @@
+:root {
+    --color-1: #145f71;
+    --color-2: #18c1ea;
+    --color-3: #f2fdfc;
+}
+
+* {
+    border: 0 none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 0 none;
+}
+
+html
+, body {
+    height: 100%;
+    width: 100%;
+    background-color: var(--color-3);
+}
