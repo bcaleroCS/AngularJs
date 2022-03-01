@@ -11,8 +11,30 @@
 <body ng-app="app">
     <section class="main" ng-controller="principalController">
         <h1>Angular JS</h1>
-        <p> ... es un framework MVC (Modelo Vista Controlador), desarrollado por Google para el Desarrollo Web Front End que permite crear aplicaciones SPA (Single-Page Applications) sin mayor problema. Al usar un patrón MVVM (model view view-model) separamos la lógica de la de diseño pero mantenemos ambas partes conectadas (data binding). De manera que la capa visual no sabe lo que está pasando en la capa lógica pero manteniendo control sobre el DOM (el cuerpo de la web) y actualizar su contenido como queramos.</p>
+        <p> ... es un framework MVC (Modelo Vista Controlador), desarrollado por Google para el Desarrollo Web Front End que permite crear aplicaciones SPA (Single-Page Applications) sin mayor problema. Al usar un patrón MVVM (model view view-model) separamos la lógica de la de diseño pero mantenemos ambas partes conectadas <b>(data binding)</b>. De manera que la capa visual no sabe lo que está pasando en la capa lógica pero manteniendo control sobre el DOM (el cuerpo de la web) y actualizar su contenido como queramos.</p>
         <h2>{{mensaje}}</h2>
+        <fieldset>
+            <input type="text" ng-model="mensaje">
+            <label for="">Campo de Texto</label>
+        </fieldset>
+        <form name="formularioName" ng-submit="enviarFormulario( formularioName )">
+            <h3>Formulario</h3>
+            <fieldset>
+                <input type="text" ng-model="formulario.nombre">
+                <label for="">Nombre</label>
+            </fieldset>
+            <fieldset>
+                <input type="date" ng-model="formulario.fecha">
+                <label for="">Fecha</label>
+            </fieldset>
+            <fieldset>
+                <input type="password" ng-model="formulario.password">
+                <label for="">Contraseña</label>
+            </fieldset>
+            <fieldset>
+                <input type="submit">
+            </fieldset>
+        </form>
     </section>
 
     <!-- SCRIPTS -->

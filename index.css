@@ -2,6 +2,7 @@
     --color-1: #145f71;
     --color-2: #18c1ea;
     --color-3: #f2fdfc;
+    --color-4: #666;
 
     --main-width: 400px;
 }
@@ -41,6 +42,79 @@ h2 {
 p {
     padding: 0 2rem;
 }
+
+form {
+    padding: 1rem;
+    background-color: white;
+    border-radius: 1rem;
+    margin-top: 1rem;
+}
+
+form > h3 {
+    color: var(--color-2);
+    text-align: center;
+    margin: 1rem 0;
+}
+
+fieldset {
+    --fieldset-size: 1rem;
+    --fieldset-font-color: var(--color-4);
+    --fieldset-highlight: var(--color-1);
+    --fieldset-label-color: var(--color-1);
+    display: grid;
+    grid-gap: .5em;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, min-content);
+    grid-template-areas:
+        'label'
+        'input';
+    position: relative;
+    font-size: var(--fieldset-size);
+    width: 100%;
+}
+
+fieldset:not(:first-of-type) {
+    margin-top: 1rem;
+}
+
+fieldset > input {
+    grid-area: input;
+    font-size: 1.2em;
+    padding: .6em 1.2em;
+    border-radius: .5rem;
+    border: 1px solid var(--fieldset-highlight);
+    color: var(--fieldset-font-color);
+}
+
+fieldset > input[type=button]
+, fieldset > input[type=reset]
+, fieldset > input[type=submit]
+, fieldset > button {
+    grid-area: input;
+    font-size: 1.2em;
+    padding: .6em 1.2em;
+    border-radius: .5rem;
+    border: 1px solid var(--fieldset-highlight);
+    background-color: var(--fieldset-highlight);
+    color: white;
+}
+
+fieldset > label {
+    grid-area: label;
+    font-size: .8em;
+    opacity: .8;
+    font-style: italic;
+    color: var(--fieldset-label-color);
+}
+
+fieldset > input:focus {
+    --fieldset-highlight: var(--color-2);
+}
+
+fieldset > input:focus ~ label {
+    --fieldset-label-color: var(--color-2);
+}
+
 
 .main {
     background-color: inherit;
