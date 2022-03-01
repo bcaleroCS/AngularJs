@@ -86,6 +86,15 @@ fieldset > input {
     color: var(--fieldset-font-color);
 }
 
+fieldset > select {
+    grid-area: input;
+    font-size: 1.2em;
+    padding: .6em 1.2em;
+    border-radius: .5rem;
+    border: 1px solid var(--fieldset-highlight);
+    color: var(--fieldset-font-color);
+}
+
 fieldset.fieldset-btns {
     display: flex;
     flex-flow: row wrap;

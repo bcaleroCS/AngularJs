@@ -20,6 +20,10 @@
         <form name="formularioName" ng-submit="enviarFormulario( formularioName )">
             <h3>Formulario</h3>
             <fieldset>
+                <select ng-options="claveh as claveh.claveh_nombre for claveh in listaClasevehiculo track by claveh.claveh_nombre" ng-model="formulario.claveh"></select>
+                <label for="">Clase de Vehículo</label>
+            </fieldset>
+            <fieldset>
                 <input type="text" ng-model="formulario.nombre">
                 <label for="">Nombre</label>
             </fieldset>
@@ -28,7 +32,7 @@
                 <label for="">Fecha</label>
             </fieldset>
             <fieldset>
-                <input type="password" ng-model="formulario.password" ng-change="changeNombre()">
+                <input type="password" ng-model="formulario.password" ng-change="changeNombre()" ng-required="requiredField()">
                 <label for="">Contraseña</label>
             </fieldset>
             <fieldset class="fieldset-btns">
