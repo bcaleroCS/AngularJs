@@ -28,11 +28,12 @@
                 <label for="">Fecha</label>
             </fieldset>
             <fieldset>
-                <input type="password" ng-model="formulario.password">
+                <input type="password" ng-model="formulario.password" ng-change="changeNombre()">
                 <label for="">Contraseña</label>
             </fieldset>
-            <fieldset>
-                <input type="submit">
+            <fieldset class="fieldset-btns">
+                <input type="reset" value="Restaurar" ng-click="resetear()">
+                <input type="submit" ng-disabled="disabledFormulario()">
             </fieldset>
         </form>
     </section>

@@ -16,5 +16,17 @@ _application.controller(
         $scope.enviarFormulario = ( _formulario ) => {
             console.log($scope.formulario, _formulario);
         };
+
+        $scope.changeNombre = () => {
+            console.log("me han cambiado");
+        };
+
+        $scope.resetear = () => {
+            console.log("RESETEADO");
+        };
+
+        $scope.disabledFormulario = () => {
+            return $scope.formulario.nombre != "BRYAN";
+        };
     }
 );

@@ -86,17 +86,31 @@ fieldset > input {
     color: var(--fieldset-font-color);
 }
 
+fieldset.fieldset-btns {
+    display: flex;
+    flex-flow: row wrap;
+}
+
 fieldset > input[type=button]
 , fieldset > input[type=reset]
 , fieldset > input[type=submit]
 , fieldset > button {
-    grid-area: input;
+    flex-grow: 1;
     font-size: 1.2em;
     padding: .6em 1.2em;
     border-radius: .5rem;
     border: 1px solid var(--fieldset-highlight);
     background-color: var(--fieldset-highlight);
     color: white;
+}
+
+fieldset > input[type=reset] {
+    background-color: white;
+    color: var(--fieldset-font-color);
+}
+
+fieldset > input:disabled {
+    opacity: .5;
 }
 
 fieldset > label {
