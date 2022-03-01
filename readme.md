@@ -5,3 +5,5 @@ Hola mundo !!!
 - index.html => Archivo donde se crea la estructura semantica de la pagina Web
 - index.css => Archivo de Estilos aplicados
 - index.js => Archivo de Logica
+
+# Se asocian los estilos y el Script
