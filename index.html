@@ -23,11 +23,11 @@
                 <select ng-options="claveh as claveh.claveh_nombre for claveh in listaClasevehiculo track by claveh.claveh_nombre" ng-model="formulario.claveh"></select>
                 <label for="">Clase de Vehículo</label>
             </fieldset>
-            <fieldset>
+            <fieldset ng-hide="formulario.claveh.claveh_codigo == 6">
                 <input type="text" ng-model="formulario.nombre">
                 <label for="">Nombre</label>
             </fieldset>
-            <fieldset>
+            <fieldset ng-show="formulario.claveh.claveh_codigo != 6">
                 <input type="date" ng-model="formulario.fecha">
                 <label for="">Fecha</label>
             </fieldset>
@@ -36,7 +36,7 @@
                 <label for="">Contraseña</label>
             </fieldset>
             <fieldset class="fieldset-btns">
-                <input type="reset" value="Restaurar" ng-click="resetear()">
+                <input ng-if="formulario.claveh.claveh_codigo != 6" type="reset" value="Restaurar" ng-click="resetear()">
                 <input type="submit" ng-disabled="disabledFormulario()">
             </fieldset>
         </form>
