@@ -17,7 +17,7 @@
             <input type="text" ng-model="mensaje">
             <label for="">Campo de Texto</label>
         </fieldset>
-        <form name="formularioName" ng-submit="enviarFormulario( formularioName )">
+        <form name="formularioName" ng-submit="enviarFormulario( formularioName )" ng-class=" { 'prueba': formulario.claveh.claveh_codigo == 6} ">
             <h3>Formulario</h3>
             <fieldset>
                 <select ng-options="claveh as claveh.claveh_nombre for claveh in listaClasevehiculo track by claveh.claveh_nombre" ng-model="formulario.claveh"></select>
@@ -39,6 +39,7 @@
                 <input ng-if="formulario.claveh.claveh_codigo != 6" type="reset" value="Restaurar" ng-click="resetear()">
                 <input type="submit" ng-disabled="disabledFormulario()">
             </fieldset>
+            <ng-include src="'template.html'"></ng-include>
         </form>
     </section>
 

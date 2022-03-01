@@ -50,6 +50,10 @@ form {
     margin-top: 1rem;
 }
 
+form.prueba {
+    border: 1px solid var(--color-2);
+}
+
 form > h3 {
     color: var(--color-2);
     text-align: center;
