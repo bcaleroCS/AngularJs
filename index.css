@@ -33,6 +33,11 @@ h1 {
     text-align: center;
 }
 
+h2 {
+    margin: 1rem 0;
+    text-align: center;
+}
+
 p {
     padding: 0 2rem;
 }

@@ -9,3 +9,6 @@ Hola mundo !!!
 # Se asocian los estilos y el Script
 
 # Se introduce algo de diseño, se organiza parte de la estructura de la pagina
+
+# Se descarga la librería de Angular V 1.8.2 ( https://angularjs.org/ ) y se inyecta al proyecto
+# Se crea el modulo principal y un controlador
